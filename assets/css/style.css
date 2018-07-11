@@ -19,6 +19,16 @@ html, body {
 	background: #efefef url("../images/cross_scratches.png");
 }
 
+.Site {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.Site-content {
+	flex: 1;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Georgia', Times, 'Times New Roman', serif;
 	color: #4aaaa5;
@@ -119,6 +129,75 @@ img.headshot {
 	padding: 0 1em 1em 0;
 	width: auto;
 	height: 180px;
+}
+/* Portfolio Page */
+.portfolio-item {
+	display: inline-block;
+	position: relative;
+	width: 270px;
+	height: 200px;
+	transition: transform .2s ease-out;
+}
+
+.portfolio-item:nth-child(even) {
+	margin-left: 25px;
+}
+
+.portfolio-item:hover {
+	transform: rotate(-4deg) scale(1.1, 1.1);
+}
+
+.item-name {
+	position: relative;
+	top: -100px;
+	text-align: center;
+	background-color: #4aaaa5;
+	padding: 1em;
+	color: #ffffff;
+	z-index: 1000;
+}
+
+/* Contact Page */
+.contact {
+	width: 540px;
+}
+
+.contact label {
+	display: block;
+	padding-bottom: 0.5em;
+}
+
+.contact input, .contact textarea {
+	width: 100%;
+	border: 1px solid #cccccc;
+	margin-bottom: 1.5em;
+	padding: 1em;
+	font-size: .9em;
+}
+
+.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
+    color: #cccccc;
+}
+
+.contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
+    color: #cccccc;
+}
+
+.contact input::-ms-placeholder, .contact textarea::-ms-placeholder {
+    color: #cccccc;
+}
+
+.contact input::placeholder, .contact textarea::placeholder {
+    color: #cccccc;
+}
+
+.contact input[type="submit"] {
+	width: auto;
+	background-color: #4aaaa5;
+	color: #ffffff;
+	border: none;
+	padding: 1em 2em;
+	font-size: 1em;
 }
 
 /* Footer */
